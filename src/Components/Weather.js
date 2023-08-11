@@ -7,7 +7,7 @@ function Weather(props) {
     return (
         <div>
             <Current current={props.data.current} />
-            <Hourly />
+            <Hourly hourly={props.data.hourly}/>
             <Daily />
         </div>
     )

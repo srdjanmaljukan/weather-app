@@ -24,35 +24,20 @@ header span {
     margin: 20px auto;
 }
 
-.current-card {
-    width: 300px;
-}
-
-.location h1 {
+.current-headers {
+    margin: 0 auto;
     text-align: center;
 }
 
-.current-weather .container {
-    aspect-ratio: 1 / 1;
-    width: 100%;
-    max-height: 100%;
-    margin: 50px auto;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-.current-weather .grid-item {
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.current-card {
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .current-weather .description {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 /* Icon */
