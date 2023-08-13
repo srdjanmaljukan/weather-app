@@ -10,10 +10,10 @@ function Current(props) {
         setTemp(currentTemp);
         let weatherIcon = props.current.weather[0].icon;
         setIcon(weatherIcon);
-    }, [])
+    }, [props])
 
     return (
-        <div className="current-weather">
+        <div id="current" className="current-weather">
             <div className="current-card card rounded-3">
                 <div className="card-header">
                     <h2 className="my-0 fw-bold">{temp}°C</h2>
@@ -23,7 +23,7 @@ function Current(props) {
                         src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
                         alt="weather-icon"
                     />
-                    <p className="description">Clear sky</p>
+                    <p className="description">{props.current.weather[0].main}</p>
                 </div>
             </div>
         </div>

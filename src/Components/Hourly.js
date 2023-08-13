@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Icon from "./Icon";
 import Carousel from 'react-bootstrap/Carousel';
-import { CarouselItem } from "react-bootstrap";
 
 function Hourly(props) {
 
@@ -12,12 +11,14 @@ function Hourly(props) {
     let hourlyData = props.hourly;
     let iconItems = hourlyData.map((hour, index) => {
       let time = new Date(hour.dt * 1000);
+      let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+      let day = days[time.getDay()];
       let hours = "0" + time.getHours();
       let minutes = "0" + time.getMinutes();
       let displayTime = hours.substring(hours.length - 2, hours.length) + ":" + minutes.substring(minutes.length - 2, minutes.length);
       let temperature = Math.round(hour.temp);
       let weatherIcon = hour.weather[0].icon;
-      return <Icon key={index} id={index} time={displayTime} temp={temperature} weatherIcon={weatherIcon} />
+      return <Icon key={index} id={index} type="hourly" day={day} time={displayTime} temp={temperature} weatherIcon={weatherIcon} />
     });
 
     let itemsPerSlide = 6;
@@ -26,10 +27,9 @@ function Hourly(props) {
     for (let i = 0; i < numberOfSlides; i++) {
       carousel.push(iconItems.splice(0, 6));
     }
-
-    carousel = carousel.map((carouselItem) => {
+    carousel = carousel.map((carouselItem, index) => {
       return (
-        <CarouselItem>
+        <Carousel.Item key={index}>
           {carouselItem.map((icon) => {
             return (
               <div className="inline-icon">
@@ -37,15 +37,15 @@ function Hourly(props) {
               </div>
             )
           })}
-        </CarouselItem>
+        </Carousel.Item>
       )
     })
 
     setCarouselItems(carousel);
-  }, [])
+  }, [props.hourly])
 
   return (
-    <div className="hourly">
+    <div id="hourly" className="hourly">
       <h2>Hourly 2-day forecast</h2>
       <Carousel data-bs-theme="dark" indicators={false} interval={null}>
 

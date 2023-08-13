@@ -5,10 +5,11 @@ import Daily from "./Daily";
 
 function Weather(props) {
     return (
-        <div>
+        <div className="weather-report">
+            <h1 className="location">{props.location.name}, {props.location.country}</h1>
             <Current current={props.data.current} />
             <Hourly hourly={props.data.hourly}/>
-            <Daily />
+            <Daily daily={props.data.daily} />
         </div>
     )
 }

@@ -11,10 +11,21 @@ header span {
     margin: 100px auto;
 }
 
+.search-bar-narrow {
+    width: 30%;
+    margin: 0;
+}
+
 .search-bar input {
     font-size: 3rem;
     border-radius: 15px;
     padding-left: 20px;
+}
+
+/* Weather */
+
+.weather-report .location {
+    text-align: center;
 }
 
 /* Current Weather */
@@ -42,8 +53,12 @@ header span {
 
 /* Icon */
 
-.icon-card {
-    width: 125px;
+.icon-card-narrow {
+    width: 135px;
+}
+
+.icon-card-wide {
+    width: 210px;
 }
 
 .inline-icon {
