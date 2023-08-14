@@ -11,7 +11,7 @@ function Hourly(props) {
     let hourlyData = props.hourly;
     let iconItems = hourlyData.map((hour, index) => {
       let time = new Date(hour.dt * 1000);
-      let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+      let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
       let day = days[time.getDay()];
       let hours = "0" + time.getHours();
       let minutes = "0" + time.getMinutes();

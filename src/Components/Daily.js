@@ -11,7 +11,7 @@ function Daily(props) {
       const dailyData = props.daily;
       const iconItems = dailyData.map((day, index) => {
         const time = new Date(day.dt * 1000);
-        const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const dayOfWeek = days[time.getDay()];
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         const date = time.toLocaleDateString("en-GB", options);

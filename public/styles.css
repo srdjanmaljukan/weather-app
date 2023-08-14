@@ -80,8 +80,8 @@ header .heading {
 }
 
 @media screen and (max-width: 768px) {
-    header ul {
+    header ul.nav {
         visibility: hidden;
-        /* position: absolute; */
+        position: absolute;
     }
 }

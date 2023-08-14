@@ -28,7 +28,7 @@ function Search(props) {
     }, [props, searchLocation])
 
     return (
-        <div className={props.type === "header" ? "search-bar-narrow col-md-4" : "search-bar"} >
+        <div className={props.type === "header" ? "search-bar-narrow col-6 col-md-4" : "search-bar fs-1"} >
             <ReactSearchAutocomplete
                 items={cities}
                 onSelect={handleOnSelect}

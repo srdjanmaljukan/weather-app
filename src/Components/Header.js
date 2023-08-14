@@ -17,7 +17,7 @@ function Header(props) {
                     <div
                         className="w-100 d-flex flex-wrap row align-items-center justify-content-center justify-content-lg-start"
                     >
-                        <div className="heading logo col-md-4">
+                        <div className="heading logo col-6 col-md-4">
                             <CloudIcon fontSize="large" color="action" />
                             <a href="/" className="nav-link px-2 link-secondary"
                             >It's always sunny... somewhere</a>
