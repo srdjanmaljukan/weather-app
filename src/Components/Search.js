@@ -28,14 +28,14 @@ function Search(props) {
     }, [props, searchLocation])
 
     return (
-        <div className={props.type === "header" ? "search-bar-narrow" : "search-bar"} >
+        <div className={props.type === "header" ? "search-bar-narrow col-md-4" : "search-bar"} >
             <ReactSearchAutocomplete
                 items={cities}
                 onSelect={handleOnSelect}
                 formatResult={formatResult}
                 showIcon={false}
                 maxResults={5}
-                className="col-6 col-lg-auto mb-3 mb-lg-0 me-lg-3"
+                // className="col-6 col-lg-auto mb-3 mb-lg-0 me-lg-3"
                 placeholder="Search..."
                 styling={props.type === "home" ? {
                     fontSize: "2rem",

@@ -1,20 +1,21 @@
 /* Header */
 
-header span {
-    margin-left: 5px;
+header .heading {
+    display: flex;
+    align-items: center;
 }
 
 /* Search */
 
 .search-bar {
-    width: 70%;
+    width: 75%;
     margin: 100px auto;
 }
 
-.search-bar-narrow {
+/* .search-bar-narrow {
     width: 30%;
     margin: 0;
-}
+} */
 
 .search-bar input {
     font-size: 3rem;
@@ -76,4 +77,11 @@ header span {
 
 .daily {
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    header ul {
+        visibility: hidden;
+        /* position: absolute; */
+    }
 }
