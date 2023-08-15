@@ -7,7 +7,7 @@ function Icon(props) {
                 <h5 className="my-0 fw-bold text-light">{props.day}</h5>
                 <h4 className="my-0 fw-bold text-light">{props.time}</h4>
             </div> : null}
-            {props.type === "daily" ? <div className="card-header py-3">
+            {props.type === "daily" ? <div className="card-header p-2">
                 <h5 className="my-0 fw-bold text-light">{props.day}</h5>
                 <h4 className="my-0 fw-bold text-light">{props.date}</h4>
             </div> : null}
@@ -16,7 +16,7 @@ function Icon(props) {
             </div>
             <div className="card-body p-0">
                 <h2 className="card-title pricing-card-title text-light">{props.temp}°C</h2>
-                {props.type === "daily" ? <h3 className="card-title pricing-card-title text-light">{`${props.minTemp}°C/${props.maxTemp}°C`}</h3> : null}
+                {props.type === "daily" ? <h4 className="card-title pricing-card-title text-light">{`${props.minTemp}°C/${props.maxTemp}°C`}</h4> : null}
             </div>
         </div>
     )

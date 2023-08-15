@@ -4,6 +4,7 @@ import Header from "./Header";
 import Search from "./Search";
 import Weather from "./Weather";
 import countryList from "../countryCodes";
+import Footer from "./Footer";
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
     <div className="App">
       <Header queried={isQueried} onSearch={addLocation} />
       {!isQueried ? <Search type="home" onAdd={addLocation} /> : <Weather data={weatherData} location={location} />}
+      <Footer queried={isQueried} />
     </div>
   );
 }

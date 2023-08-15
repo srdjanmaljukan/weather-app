@@ -14,16 +14,16 @@ const theme = createTheme({
 function Header(props) {
     return (
         <ThemeProvider theme={theme}>
-        <div className="container">
+        <div className="container rounded-bottom-4">
             {!props.queried ?
-                <header className="d-flex justify-content-center main-header py-3 mb-2 border-bottom">
+                <header className="d-flex justify-content-center main-header py-3 mb-2">
                     <a href="/" className="d-flex align-items-center mx-auto text-decoration-none">
                         <CloudIcon fontSize="large" color="primary" />
                         <span className="fs-4 fw-bold ms-2 text-light">It's always sunny... somewhere</span>
                     </a>
                 </header>
                 :
-                <header className="p-3 mb-3 border-bottom">
+                <header className="p-3 mb-3">
                     <div
                         className="w-100 d-flex flex-wrap row align-items-center justify-content-center justify-content-lg-start"
                     >

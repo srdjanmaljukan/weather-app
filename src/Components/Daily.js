@@ -13,7 +13,7 @@ function Daily(props) {
         const time = new Date(day.dt * 1000);
         const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const dayOfWeek = days[time.getDay()];
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const options = {month: 'short', day: 'numeric' };
         const date = time.toLocaleDateString("en-GB", options);
         const temperature = Math.round(day.temp.day);
         const tempMin = Math.round(day.temp.min);
