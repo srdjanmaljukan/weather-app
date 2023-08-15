@@ -11,10 +11,10 @@ function Icon(props) {
                 <h4 className="my-0 fw-bold">{props.day}</h4>
                 <h2 className="my-0 fw-bold">{props.date}</h2>
             </div> : null}
-            <div className="card-body">
+            <div className="card-body p-0">
                 <img src={`https://openweathermap.org/img/wn/${props.weatherIcon}@2x.png`} alt="weather-icon" />
             </div>
-            <div className="card-body">
+            <div className="card-body p-0">
                 <h1 className="card-title pricing-card-title">{props.temp}°C</h1>
                 {props.type === "daily" ? <h3 className="card-title pricing-card-title">{`${props.minTemp}°C/${props.maxTemp}°C`}</h3> : null}
             </div>

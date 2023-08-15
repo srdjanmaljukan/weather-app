@@ -17,7 +17,7 @@ function Current(props) {
 
     return (
         <div id="current" className="current-weather">
-            <div className="current-card card rounded-3 z-n1">
+            <div className="current-card card bg-transparent text-light rounded-3 z-n1 text-center mx-auto">
                 <div className="card-header">
                     <h2 className="my-0 fw-bold">{temp}°C</h2>
                 </div>
@@ -25,8 +25,9 @@ function Current(props) {
                     <img
                         src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
                         alt="weather-icon"
+                        className="mx-auto"
                     />
-                    <p className="description">{description}</p>
+                    <p className="description fw-bold fs-1">{description}</p>
                 </div>
             </div>
         </div>

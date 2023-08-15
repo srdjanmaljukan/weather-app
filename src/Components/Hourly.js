@@ -45,9 +45,9 @@ function Hourly(props) {
   }, [props.hourly])
 
   return (
-    <div id="hourly" className="hourly">
+    <div id="hourly" className="hourly text-light">
       <h2>Hourly 2-day forecast</h2>
-      <Carousel data-bs-theme="dark" indicators={false} interval={null}>
+      <Carousel bsPrefix="carousel" data-bs-theme="dark" indicators={false} interval={null} wrap={false}>
 
         {carouselItems}
       </Carousel>

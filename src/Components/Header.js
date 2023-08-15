@@ -7,9 +7,9 @@ function Header(props) {
         <div className="container">
             {!props.queried ?
                 <header className="d-flex justify-content-center main-header py-3 mb-2 border-bottom">
-                    <a href="/" className="mx-auto me-md-auto link-body-emphasis text-decoration-none">
+                    <a href="/" className="d-flex align-items-center mx-auto text-decoration-none">
                         <CloudIcon fontSize="large" color="action" />
-                        <span className="fs-4 ms-2">It's always sunny... somewhere</span>
+                        <span className="fs-4 fw-bold ms-2 text-light">It's always sunny... somewhere</span>
                     </a>
                 </header>
                 :
@@ -19,19 +19,19 @@ function Header(props) {
                     >
                         <div className="heading logo col-6 col-md-4">
                             <CloudIcon fontSize="large" color="action" />
-                            <a href="/" className="nav-link px-2 link-secondary"
+                            <a href="/" className="text-light fw-bold nav-link px-2 link-secondary"
                             >It's always sunny... somewhere</a>
                         </div>
                         <ul
                             className="nav col-md-4 mb-2 justify-content-end mb-md-0"
                         >
-                            <li><a href="/#current" className="nav-link me-lg-3 px-2 link-body-emphasis">Current</a></li>
+                            <li><a href="/#current" className="text-light fw-bold nav-link me-lg-3 px-2 link-body-emphasis">Current</a></li>
                             <li>
-                                <a href="/#hourly" className="nav-link me-lg-3 px-2 link-body-emphasis"
+                                <a href="/#hourly" className="text-light fw-bold nav-link me-lg-3 px-2 link-body-emphasis"
                                 >Hourly</a>
                             </li>
                             <li>
-                                <a href="/#daily" className="nav-link me-lg-3 px-2 link-body-emphasis"
+                                <a href="/#daily" className="text-light fw-bold nav-link me-lg-3 px-2 link-body-emphasis"
                                 >Daily</a>
                             </li>
                         </ul>

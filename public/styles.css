@@ -1,3 +1,15 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    background-image: url("./sky.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 /* Header */
 
 header .heading {
@@ -12,50 +24,22 @@ header .heading {
     margin: 100px auto;
 }
 
-/* .search-bar-narrow {
-    width: 30%;
-    margin: 0;
-} */
-
-.search-bar input {
-    font-size: 3rem;
-    border-radius: 15px;
-    padding-left: 20px;
-}
 
 /* Weather */
-
-.weather-report .location {
-    text-align: center;
-}
 
 /* Current Weather */
 
 .current-weather {
     width: 30%;
     margin: 20px auto;
-}
-
-.current-headers {
-    margin: 0 auto;
-    text-align: center;
-}
-
-.current-card {
-    width: 250px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.current-weather .description {
-    font-weight: bold;
-    font-size: 2rem;
+    color: white !important;
 }
 
 /* Icon */
 
 .icon-card-narrow {
     width: 135px;
+    background-color: transparent !important; 
 }
 
 .icon-card-wide {
@@ -83,5 +67,15 @@ header .heading {
     header ul.nav {
         visibility: hidden;
         position: absolute;
+    }
+
+    .current-weather {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .current-weather {
+        width: 60%;
     }
 }
