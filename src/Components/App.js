@@ -18,7 +18,7 @@ function App() {
         locationInfo.countryCode = countryList[locationInfo.country];
       }
       setLocation(locationInfo);
-      const geocodeUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${locationInfo.name},${locationInfo.countryCode}&limit=1&appid=${process.env.REACT_APP_API_KEY}`;
+      const geocodeUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${locationInfo.name},${locationInfo.countryCode}&limit=1&appid=${process.env.REACT_APP_API_KEY}`;
       fetch(geocodeUrl).then((response) => response.json()).then((data) => {
         const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${data[0].lat}&lon=${data[0].lon}&exclude=minutely,alerts&units=metric&appid=${process.env.REACT_APP_API_KEY}`;
         fetch(url).then((response) => response.json()).then((data) => {
