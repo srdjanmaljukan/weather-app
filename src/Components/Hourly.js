@@ -45,7 +45,7 @@ function Hourly(props) {
   }, [props.hourly])
 
   return (
-    <div id="hourly" className="hourly text-light">
+    <div id="hourly" className="hourly text-light text-center">
       <h2>Hourly 2-day forecast</h2>
       <Carousel bsPrefix="carousel" data-bs-theme="dark" indicators={false} interval={null} wrap={false}>
 

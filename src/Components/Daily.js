@@ -46,9 +46,9 @@ function Daily(props) {
     }, [props.daily])
 
   return (
-    <div id="daily" className="daily">
-      <h2>Daily 8-days forecast</h2>
-      <Carousel data-bs-theme="dark" indicators={false} interval={null}>
+    <div id="daily" className="daily text-center">
+      <h2>Daily 8-day forecast</h2>
+      <Carousel data-bs-theme="dark" indicators={false} interval={null} wrap={false}>
         {carouselItems}
       </Carousel>
     </div>

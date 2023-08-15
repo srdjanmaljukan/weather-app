@@ -3,20 +3,20 @@ import React from "react";
 function Icon(props) {
     return (
         <div className={`${props.type === "hourly" ? "icon-card-narrow" : "icon-card-wide"} card mb-4 rounded-3 shadow-sm`}>
-            {props.type === "hourly" ? <div className="card-header py-3">
-                <h4 className="my-0 fw-bold">{props.day}</h4>
-                <h2 className="my-0 fw-bold">{props.time}</h2>
+            {props.type === "hourly" ? <div className="card-header p-2">
+                <h5 className="my-0 fw-bold text-light">{props.day}</h5>
+                <h4 className="my-0 fw-bold text-light">{props.time}</h4>
             </div> : null}
             {props.type === "daily" ? <div className="card-header py-3">
-                <h4 className="my-0 fw-bold">{props.day}</h4>
-                <h2 className="my-0 fw-bold">{props.date}</h2>
+                <h5 className="my-0 fw-bold text-light">{props.day}</h5>
+                <h4 className="my-0 fw-bold text-light">{props.date}</h4>
             </div> : null}
             <div className="card-body p-0">
-                <img src={`https://openweathermap.org/img/wn/${props.weatherIcon}@2x.png`} alt="weather-icon" />
+                <img src={`https://openweathermap.org/img/wn/${props.weatherIcon}@2x.png`} alt="weather-icon" className="weather-icon" />
             </div>
             <div className="card-body p-0">
-                <h1 className="card-title pricing-card-title">{props.temp}°C</h1>
-                {props.type === "daily" ? <h3 className="card-title pricing-card-title">{`${props.minTemp}°C/${props.maxTemp}°C`}</h3> : null}
+                <h2 className="card-title pricing-card-title text-light">{props.temp}°C</h2>
+                {props.type === "daily" ? <h3 className="card-title pricing-card-title text-light">{`${props.minTemp}°C/${props.maxTemp}°C`}</h3> : null}
             </div>
         </div>
     )

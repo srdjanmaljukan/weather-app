@@ -17,7 +17,7 @@ function Current(props) {
 
     return (
         <div id="current" className="current-weather">
-            <div className="current-card card bg-transparent text-light rounded-3 z-n1 text-center mx-auto">
+            <div className="current-card card text-light rounded-3 z-n1 text-center mx-auto">
                 <div className="card-header">
                     <h2 className="my-0 fw-bold">{temp}°C</h2>
                 </div>

@@ -35,15 +35,20 @@ header .heading {
     color: white !important;
 }
 
+.current-card {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
 /* Icon */
 
 .icon-card-narrow {
     width: 135px;
-    background-color: transparent !important; 
+    background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
 .icon-card-wide {
     width: 210px;
+    background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
 .inline-icon {
@@ -51,16 +56,15 @@ header .heading {
     padding: 10px;
 }
 
-/* Hourly */
+@media screen and (max-width: 1200px) {
 
-.hourly {
-    text-align: center;
-}
-
-/* Daily */
-
-.daily {
-    text-align: center;
+    .inline-icon {
+        padding: 5px;
+    }
+    
+    .icon-card-narrow {
+        width: 95px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -72,10 +76,56 @@ header .heading {
     .current-weather {
         width: 40%;
     }
+    
+    .inline-icon {
+        padding: 2px;
+    }
+
+    .icon-card-narrow {
+        width: 75px;
+    }
+
+    .weather-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hourly .card h5 {
+        font-size: 1rem !important;
+    }
+
+    .hourly .card h4 {
+        font-size: 0.8rem;
+    }
+
+    .hourly .card h2 {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (max-width: 576px) {
     .current-weather {
         width: 60%;
+    }
+
+    .inline-icon {
+        padding: 1px;
+    }
+
+    .icon-card-narrow {
+        width: 60px;
+    }
+
+    .weather-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .carousel-control-prev {
+        visibility: hidden;
+    }
+
+    .carousel-control-next {
+        visibility: hidden;
     }
 }
